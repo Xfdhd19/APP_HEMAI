@@ -35,5 +35,5 @@ if uploaded_image is not None:
     results = model(image)
 
     # Display results
-    st.image(results[0].plot(), caption="Detected Objects", use_container_width=True)
+    st.image(results[0].plot(), caption="🩸RESULTS🩸", use_container_width=True)
    
