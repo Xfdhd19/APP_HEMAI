@@ -6,17 +6,25 @@ from ultralytics import YOLO
 model = YOLO(r"weights/best.pt") # Replace with your model path
 
 # Streamlit app
+def get_base64_of_image(image_path):
+    with open(image_path, "rb") as image_file:
+        return base64.b64encode(image_file.read()).decode()
+
+# Get Base64 string of the image
+image_base64 = get_base64_of_image("assets/487532941_3923791627934196_5685610057213667268_n.png")  # Replace with your image path
+
+# Apply background image using CSS
 st.markdown(
-    """
+    f"""
     <style>
-    .stApp {
-        background-image: 'assets/487532941_3923791627934196_5685610057213667268_n.png';  /* Local image path */
+    .stApp {{
+        background-image: url("data:image/png;base64,{image_base64}");
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-    }
+    }}
     </style>
-    """, 
+    """,
     unsafe_allow_html=True
 )
 st.image(r"assets/LOGO_HEMAI.png", use_container_width=True)
