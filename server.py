@@ -9,8 +9,7 @@ model = YOLO(r"weights/best.pt") # Replace with your model path
 st.image(r"assets/LOGO_HEMAI.png", use_container_width=True)
 st.image(r"assets/logologo.png", use_container_width=True)
 
-st.markdown('<h1 style="color:#B22222
-;">Anemia Type Classifier </h1>', unsafe_allow_html=True)
+st.markdown('<h1 style="color:#B22222;">Anemia Type Classifier </h1>', unsafe_allow_html=True)
 st.markdown(
     """
     <p>⚠️ <span style="color:#FF4500; font-weight: bold;">DISCLAIMER:</span>  
