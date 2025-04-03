@@ -3,10 +3,10 @@ import PIL.Image
 from ultralytics import YOLO
 
 # Load YOLOv8 model
-model = YOLO(r"weights\best.pt") # Replace with your model path
+model = YOLO(r"weights/best.pt") # Replace with your model path
 
 # Streamlit app
-st.image(r"assets\LOGO_HEMAI.png", use_column_width=True)
+st.image(r"assets/LOGO_HEMAI.png", use_column_width=True)
 
 st.title("Anemia Type Classifier")
 st.markdown(
