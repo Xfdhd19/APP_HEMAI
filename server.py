@@ -6,6 +6,19 @@ from ultralytics import YOLO
 model = YOLO(r"weights/best.pt") # Replace with your model path
 
 # Streamlit app
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-image: url('assets/487532941_3923791627934196_5685610057213667268_n.png');  /* Local image path */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    </style>
+    """, 
+    unsafe_allow_html=True
+)
 st.image(r"assets/LOGO_HEMAI.png", use_container_width=True)
 st.image(r"assets/logologo.png", use_container_width=True)
 
@@ -13,6 +26,7 @@ st.markdown('<h1 style="color:#B22222;">Anemia Type Classifier </h1>', unsafe_al
 st.markdown(
     """
     <p>⚠️ <span style="color:#FF4500; font-weight: bold;">DISCLAIMER:</span>  
+    
     HEMAI only classifies 4 classes:  
     <span style="color: #FFD700; font-weight: bold;">Healthy Blood</span>,  
     <span style="color: #FFD700; font-weight: bold;">Hemolytic Anemia</span>,  
@@ -23,7 +37,7 @@ st.markdown(
 )
 
 # Upload image
-uploaded_image = st.file_uploader("📷 **Please upload an image of a blood smear from a microscope view.**", type=["jpg", "png", "jpeg"])
+uploaded_image = st.file_uploader("📷Please upload an image of a blood smear from a microscope view.", type=["jpg", "png", "jpeg"])
 
 if uploaded_image is not None:
     # Read image
