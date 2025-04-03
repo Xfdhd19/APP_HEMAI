@@ -14,7 +14,7 @@ def get_base64_of_image(image_path):
         return base64.b64encode(img_file.read()).decode()
 
 # Get Base64 image
-image_base64 = get_base64_of_image("assets/background.png")  # Ensure correct path
+image_base64 = get_base64_of_image("assets/487532941_3923791627934196_5685610057213667268_n.png")  # Ensure correct path
 
 # Inject CSS to set the background
 st.markdown(
