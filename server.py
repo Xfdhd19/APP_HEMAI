@@ -9,12 +9,15 @@ model = YOLO(r"weights/best.pt") # Replace with your model path
 st.image(r"assets/LOGO_HEMAI.png", use_container_width=True)
 st.image(r"assets/logologo.png", use_container_width=True)
 
-st.title('<h1 style="color:#FF5733;">Anemia Type Classifier </h1>', unsafe_allow_html=True)
+st.markdown('<h1 style="color:#FF5733;">Anemia Type Classifier </h1>', unsafe_allow_html=True)
 st.markdown(
     """
-    ⚠️:orange[**DISCLAIMER:**] HEMAI only classifies 4 classes: **Healthy Blood**, **Hemolytic Anemia**,  
-                    **Sickle Cell Anemia**, and **Thalassemia Anemia**.
-    """
+    <p>⚠️ <span style="color: orange; font-weight: bold;">DISCLAIMER:</span>  
+    HEMAI only classifies 4 classes:  
+    <strong>Healthy Blood</strong>, <strong>Hemolytic Anemia</strong>,  
+    <strong>Sickle Cell Anemia</strong>, and <strong>Thalassemia Anemia</strong>.
+    </p>
+    """, unsafe_allow_html=True
 )
 
 # Upload image
