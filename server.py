@@ -23,7 +23,7 @@ st.markdown(
 )
 
 # Upload image
-uploaded_image = st.file_uploader("📷 Please upload an image of a blood smear from a microscope view.", type=["jpg", "png", "jpeg"])
+uploaded_image = st.file_uploader("📷 **Please upload an image of a blood smear from a microscope view.**", type=["jpg", "png", "jpeg"])
 
 if uploaded_image is not None:
     # Read image
