@@ -1,9 +1,25 @@
 import streamlit as st
 import PIL.Image
+import os
+import requests
 from ultralytics import YOLO
 
-# Load YOLOv8 model
-model = YOLO(r"weights/best.pt") # Replace with your model path
+model_url = "https://drive.google.com/drive/u/2/folders/1-SaaH2TFedzV5cVBSAdNoH4dA1N6FWrd?fbclid=IwZXh0bgNhZW0CMTEAAR19kKDegJDvjxrQfAW6LY5bBInAs_s5ejKh1FkZ-t4sW4ptdbiZuRYtyM0_aem_EAKmyqNFE05CbAFhU9rOAA"  # Replace with actual link
+model_path = "./best.pt"
+
+# Ensure directory exists
+os.makedirs("weights", exist_ok=True)
+
+# Download model if not present
+if not os.path.exists(model_path):
+    print("Downloading model...")
+    response = requests.get(model_url)
+    with open(model_path, "wb") as f:
+        f.write(response.content)
+    print("Download complete!")
+
+model = YOLO(model_path)
+
 
 # Streamlit app
 st.image(r"assets/LOGO_HEMAI.png", use_column_width=True)
