@@ -28,3 +28,8 @@ if uploaded_image is not None:
 
     # Display results
     st.image(results[0].plot(), caption="Detected Objects", use_column_width=True)
+    detected_classes = [model.names[int(box.cls)] for box in results[0].boxes]
+
+    # Check if "Healthy Blood" is detected
+    if "Healthy Blood" in detected_classes:
+        st.success("✅ The blood sample appears to be **Healthy Blood**. No signs of anemia detected.")
