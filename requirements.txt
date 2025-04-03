@@ -1,0 +1,7 @@
+ultralytics  # YOLOv8
+streamlit  # Web UI
+torch  # PyTorch (for YOLOv8)
+opencv-python  # Image processing
+pillow  # Image handling
+numpy  # Numerical operations
+matplotlib  # Visualization
