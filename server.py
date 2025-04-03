@@ -12,7 +12,7 @@ st.image(r"assets/logologo.png", use_container_width=True)
 st.title("Anemia Type Classifier")
 st.markdown(
     """
-    ⚠️**DISCLAIMER:** HEMAI only classifies 4 classes: **Healthy Blood**, **Hemolytic Anemia**,  
+    ⚠️:#FF4500[**DISCLAIMER:**] HEMAI only classifies 4 classes: **Healthy Blood**, **Hemolytic Anemia**,  
                     **Sickle Cell Anemia**, and **Thalassemia Anemia**.
     """
 )
