@@ -13,12 +13,13 @@ st.image(r"assets/logologo.png", use_container_width=True)
 st.markdown('<h1 style="text-align: center;color:#B22222;">Anemia Type Classifier </h1>', unsafe_allow_html=True)
 st.markdown(
     """
-    <p style="font-size: 18px;>
-    ⚠️ <span style="color:#FF4500; font-weight: bold;">DISCLAIMER:
-    </span> 
-    
-     HEMAI only classifies 4 classes:<span style="color: #FFD700; font-weight: bold;"> Healthy Blood</span>, <span style="color: #FFD700; font-weight: bold;">Hemolytic Anemia</span>,  
-    <span style="color: #FFD700; font-weight: bold;">Sickle Cell Anemia</span>, and <span style="color: #FFD700; font-weight: bold;">Thalassemia Anemia</span>.
+    <p style="font-size: 18px;">
+        ⚠️ <span style="color:#FF4500; font-weight: bold;">DISCLAIMER:</span>  
+        HEMAI only classifies 4 classes:  
+        <span style="color: #FFD700; font-weight: bold;">Healthy Blood</span>,  
+        <span style="color: #FFD700; font-weight: bold;">Hemolytic Anemia</span>,  
+        <span style="color: #FFD700; font-weight: bold;">Sickle Cell Anemia</span>,  
+        and <span style="color: #FFD700; font-weight: bold;">Thalassemia Anemia</span>.
     </p>
     """, unsafe_allow_html=True
 )
